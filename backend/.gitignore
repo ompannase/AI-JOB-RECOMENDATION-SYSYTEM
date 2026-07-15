@@ -1,0 +1,33 @@
+# Python virtual environment
+myenv/
+
+# Database files
+*.db
+*.json
+
+# NumPy binary files
+*.npy
+
+# FAISS index files
+*.faiss
+
+# Environment variables
+.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp

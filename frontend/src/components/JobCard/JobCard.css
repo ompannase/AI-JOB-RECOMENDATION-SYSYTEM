@@ -1,0 +1,346 @@
+.job-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary-500), var(--primary-600));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.job-card:hover::before {
+  opacity: 1;
+}
+
+.job-card-header {
+  margin-bottom: 1rem;
+}
+
+.job-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job-title-section {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.company-name {
+  font-weight: 600;
+  color: var(--primary-600);
+}
+
+.separator {
+  color: var(--gray-400);
+}
+
+.match-strength {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.match-strength.perfect {
+  background: var(--success);
+  color: white;
+}
+
+.match-strength.strong {
+  background: var(--primary-500);
+  color: white;
+}
+
+.match-strength.good {
+  background: var(--primary-400);
+  color: white;
+}
+
+.match-strength.fair {
+  background: var(--warning);
+  color: white;
+}
+
+.match-strength.basic {
+  background: var(--gray-400);
+  color: white;
+}
+
+.job-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bookmark-btn {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-btn:hover {
+  color: var(--warning);
+  background: var(--gray-100);
+}
+
+.bookmark-btn.bookmarked {
+  color: var(--warning);
+}
+
+.job-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.meta-item .salary {
+  font-weight: 600;
+  color: var(--success);
+}
+
+.meta-item.category {
+  background: var(--gray-100);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.skills-section {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.job-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.details-toggle {
+  background: none;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.details-toggle:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+  color: var(--gray-700);
+}
+
+.apply-btn {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+}
+
+.match-details {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.match-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+}
+
+.signals-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.signal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signal-header span:first-child {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.signal-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.signal-bar {
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.signal-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-fill {
+  background: linear-gradient(90deg, var(--success), #22c55e);
+}
+
+.title-fill {
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+}
+
+.location-fill {
+  background: linear-gradient(90deg, #8b5cf6, #a855f7);
+}
+
+.ai-fill {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.signals-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.summary-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    padding: 1.25rem;
+  }
+  
+  .job-main-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .job-actions {
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .job-meta {
+    gap: 1rem;
+  }
+  
+  .job-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .signals-summary {
+    grid-template-columns: 1fr;
+  }
+}
